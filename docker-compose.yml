@@ -32,9 +32,6 @@ services:
       - order-service
     network_mode: "service:order-service"
 
-  zipkin:
-    image: openzipkin/zipkin-slim
-
   ############################
   # Redis (commented out as we are using a public mqtt broker for testing, no need for local instance of redis or mosquitto)
   ############################
@@ -48,5 +45,3 @@ services:
 
 networks:
   order-service:
-    external:
-      name: local_order_service
